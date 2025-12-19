@@ -1,0 +1,1926 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::TabShape::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>35</y>
+      <width>300</width>
+      <height>380</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::InputMethodHint::ImhNone</set>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="HomePage">
+     <widget class="QFrame" name="MenuButtonFrame">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>195</y>
+        <width>260</width>
+        <height>155</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <widget class="QWidget" name="menuNavigationWidget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>0</y>
+         <width>120</width>
+         <height>155</height>
+        </rect>
+       </property>
+       <widget class="QPushButton" name="fileSelection">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>101</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="text">
+         <string>File Selection</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="metadataDisplay">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>50</y>
+          <width>101</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="text">
+         <string>Metadata Display</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="timingWindows">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>80</y>
+          <width>101</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="text">
+         <string>Timing Windows</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="mysteryButton">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>110</y>
+          <width>101</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="text">
+         <string>🔒</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="serialPortFrame">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>105</y>
+        <width>260</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <widget class="QLabel" name="SerialPortLabel">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>120</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Serial Port:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="SerialPorts">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>8</y>
+         <width>100</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>--select</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>--select</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QDialogButtonBox" name="ConfigurePort">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>45</y>
+         <width>260</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="inputMethodHints">
+        <set>Qt::InputMethodHint::ImhNone</set>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::StandardButton::Retry|QDialogButtonBox::StandardButton::Save</set>
+       </property>
+       <property name="centerButtons">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="SettingsPage">
+     <widget class="QFrame" name="FileSelectionFrame">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>260</width>
+        <height>120</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <widget class="QLabel" name="AudioLabel">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>40</y>
+         <width>80</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Audio:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="SequenceLabel">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>60</y>
+         <width>80</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Sequence:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="HeaderFileSelection">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>260</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>File Selection</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="SelectAudioButton">
+       <property name="geometry">
+        <rect>
+         <x>202</x>
+         <y>40</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: transparent;
+	border: none;
+	padding: 0;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset theme="QIcon::ThemeIcon::DocumentProperties"/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>16</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="SelectSequenceButton">
+       <property name="geometry">
+        <rect>
+         <x>202</x>
+         <y>60</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: transparent;
+	border: none;
+	padding: 0;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset theme="QIcon::ThemeIcon::DocumentProperties"/>
+       </property>
+      </widget>
+      <widget class="QDialogButtonBox" name="ConfirmSelection">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>85</y>
+         <width>260</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="tabletTracking">
+        <bool>false</bool>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::FocusPolicy::NoFocus</enum>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LayoutDirection::RightToLeft</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::StandardButton::Reset|QDialogButtonBox::StandardButton::Save</set>
+       </property>
+       <property name="centerButtons">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="saveLocationFrame">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>145</y>
+        <width>260</width>
+        <height>105</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <widget class="QLabel" name="saveLocationLabel">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>260</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Save Location</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QWidget" name="RAMorEEPROMwidget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>45</y>
+         <width>260</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <widget class="QCheckBox" name="SaveToDeviceRAM">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>0</y>
+          <width>50</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="text">
+         <string>RAM</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="SaveToDeviceEEPROM">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>0</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="text">
+         <string>EEPROM</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="SaveSettingsButton">
+       <property name="geometry">
+        <rect>
+         <x>92</x>
+         <y>71</y>
+         <width>76</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Save</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="viewDeviceSettingsFrame">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>255</y>
+        <width>260</width>
+        <height>95</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <widget class="QLabel" name="ViewDeviceSettingsLabel">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>260</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>View Device Settings</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="DeviceEepromLabel">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>40</y>
+         <width>80</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>EEPROM:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="SaveEepromSequence">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>40</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: transparent;
+	border: none;
+	padding: 0;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset theme="QIcon::ThemeIcon::DocumentProperties"/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>16</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="DeviceRamLabel">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>60</y>
+         <width>80</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>RAM:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="SaveRamSequence">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>60</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: transparent;
+	border: none;
+	padding: 0;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset theme="QIcon::ThemeIcon::DocumentProperties"/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="homeFromFileWidget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>355</y>
+        <width>260</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <widget class="QPushButton" name="homeFromFiles">
+       <property name="geometry">
+        <rect>
+         <x>92</x>
+         <y>0</y>
+         <width>76</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>Home</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="MainPage">
+     <widget class="QFrame" name="PropertiesFrame">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>260</width>
+        <height>330</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <widget class="QLabel" name="SetSequence">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>260</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Sequence Info Display</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QFrame" name="MetadataFrame">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>40</y>
+         <width>220</width>
+         <height>120</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+       <widget class="QWidget" name="metadataLabelsWidget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>70</width>
+          <height>116</height>
+         </rect>
+        </property>
+        <widget class="QLabel" name="ArtistLabel">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>70</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Artist:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="NameLabel">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>30</y>
+           <width>70</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Name:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="BPMLabel">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>50</y>
+           <width>70</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>BPM:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="OffsetLabel">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>70</y>
+           <width>70</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Offset:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="DifficultyLabel">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>90</y>
+           <width>70</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Difficulty:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="MetadataLabelsWidget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>0</y>
+          <width>140</width>
+          <height>116</height>
+         </rect>
+        </property>
+        <widget class="QLabel" name="BPMDisplay">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>130</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="OffsetDisplay">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>130</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="DifficultyDisplay">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>90</y>
+           <width>130</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>N/A</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="audioPlayerWidget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>190</y>
+         <width>260</width>
+         <height>110</height>
+        </rect>
+       </property>
+       <widget class="QPushButton" name="ReplayAudio">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>10</y>
+          <width>40</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="statusTip">
+         <string/>
+        </property>
+        <property name="whatsThis">
+         <string/>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	background-color: transparent;
+	border: none;
+	padding: 0;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="AudioPlayback">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>10</y>
+          <width>40</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="statusTip">
+         <string/>
+        </property>
+        <property name="whatsThis">
+         <string/>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	background-color: transparent;
+	border: none;
+	padding: 0;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="elapsed">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>50</y>
+          <width>70</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>00:00 / 00:00</string>
+        </property>
+       </widget>
+       <widget class="QProgressBar" name="progressBar">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>70</y>
+          <width>220</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="textVisible">
+         <bool>false</bool>
+        </property>
+        <property name="format">
+         <string>%p%</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="volumeAdjustWidget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>90</y>
+          <width>101</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LayoutDirection::LeftToRight</enum>
+        </property>
+        <widget class="QSlider" name="volumeSlider">
+         <property name="geometry">
+          <rect>
+           <x>24</x>
+           <y>0</y>
+           <width>71</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="mouseTracking">
+          <bool>false</bool>
+         </property>
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="singleStep">
+          <number>5</number>
+         </property>
+         <property name="value">
+          <number>70</number>
+         </property>
+         <property name="sliderPosition">
+          <number>70</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::TickPosition::NoTicks</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="volumeIcon">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>20</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="secretButton">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>10</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>WhatsThisCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+        background-color: transparent;
+        border: none;
+        color: transparent;
+    }</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="homeFromInfo">
+      <property name="geometry">
+       <rect>
+        <x>112</x>
+        <y>355</y>
+        <width>76</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="text">
+       <string>Home</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="TimingWindowsPage">
+     <widget class="QFrame" name="CurrentSettings">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>260</width>
+        <height>230</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <widget class="QLabel" name="TimingWindowsSettingsLabel">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>260</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+         <underline>false</underline>
+        </font>
+       </property>
+       <property name="text">
+        <string>Timing Windows Settings</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QTableWidget" name="TimingWindowTable">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>40</y>
+         <width>220</width>
+         <height>176</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="cursor" stdset="0">
+        <cursorShape>CrossCursor</cursorShape>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Sunken</enum>
+       </property>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustIgnored</enum>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+       </property>
+       <property name="dragDropOverwriteMode">
+        <bool>false</bool>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <property name="showGrid">
+        <bool>true</bool>
+       </property>
+       <property name="gridStyle">
+        <enum>Qt::PenStyle::SolidLine</enum>
+       </property>
+       <property name="sortingEnabled">
+        <bool>false</bool>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+       <property name="cornerButtonEnabled">
+        <bool>false</bool>
+       </property>
+       <attribute name="horizontalHeaderVisible">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="horizontalHeaderMinimumSectionSize">
+        <number>34</number>
+       </attribute>
+       <attribute name="horizontalHeaderDefaultSectionSize">
+        <number>164</number>
+       </attribute>
+       <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="horizontalHeaderStretchLastSection">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderVisible">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="verticalHeaderCascadingSectionResizes">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderStretchLastSection">
+        <bool>false</bool>
+       </attribute>
+       <row>
+        <property name="text">
+         <string>Perfect!</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignCenter</set>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Good!</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignCenter</set>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>OK</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignCenter</set>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Poor</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignCenter</set>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Miss</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignCenter</set>
+        </property>
+       </row>
+       <column>
+        <property name="text">
+         <string>Duration (ms)</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+       </column>
+       <item row="0" column="0">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignCenter</set>
+        </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+        </property>
+       </item>
+       <item row="1" column="0">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignCenter</set>
+        </property>
+       </item>
+       <item row="2" column="0">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignCenter</set>
+        </property>
+       </item>
+       <item row="3" column="0">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignCenter</set>
+        </property>
+       </item>
+       <item row="4" column="0">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="textAlignment">
+         <set>AlignCenter</set>
+        </property>
+        <property name="flags">
+         <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+        </property>
+       </item>
+      </widget>
+      <widget class="QPushButton" name="resetDeviceToDefaults">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="cursor">
+        <cursorShape>WhatsThisCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+        background-color: transparent;
+        border: none;
+        color: transparent;
+    }</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="timingWindowsAdjustFrame">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>260</y>
+        <width>260</width>
+        <height>90</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <widget class="QDialogButtonBox" name="SaveChoice">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>46</y>
+         <width>260</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::StandardButton::Apply|QDialogButtonBox::StandardButton::Reset|QDialogButtonBox::StandardButton::SaveAll</set>
+       </property>
+       <property name="centerButtons">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QWidget" name="timingSliderWidget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>20</y>
+         <width>260</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <widget class="QSlider" name="horizontalSlider">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>0</y>
+          <width>120</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="cursor">
+         <cursorShape>OpenHandCursor</cursorShape>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>500</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="ValueFromSlider">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>0</y>
+          <width>50</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>250 ms</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="homeFromTW">
+      <property name="geometry">
+       <rect>
+        <x>112</x>
+        <y>355</y>
+        <width>76</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="text">
+       <string>Home</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="mysteryPage">
+     <widget class="QWidget" name="mysteryWidget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>260</width>
+        <height>330</height>
+       </rect>
+      </property>
+      <widget class="QLabel" name="mysteryLabel">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>260</width>
+         <height>173</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPlainTextEdit" name="endCredits">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>200</y>
+         <width>260</width>
+         <height>115</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="acceptDrops">
+        <bool>false</bool>
+       </property>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="plainText">
+        <string>ENGG2800 Team 7
+
+Jack Scotton:               PC Software
+Mohamed Zoheiry:     Firmware / Comms
+Bryan Jun Qian Lau:    Firmware / Game Logic
+Yi He:                          Hardware / PCB</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="AudioSynchronisation">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>180</y>
+         <width>91</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>Audio Sync</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="homeFromMystery">
+      <property name="geometry">
+       <rect>
+        <x>112</x>
+        <y>355</y>
+        <width>76</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="text">
+       <string>Home</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="Title_TPMANIA">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>300</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>ROG Fonts</family>
+      <pointsize>24</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LayoutDirection::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>TPMANIA</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="threadIndicator">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>5</y>
+      <width>8</width>
+      <height>8</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="readyIndicator">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>5</y>
+      <width>8</width>
+      <height>8</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
