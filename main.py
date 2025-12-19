@@ -73,6 +73,7 @@ import serial
 import sys
 import time
 import warnings
+from pathlib import Path
 
 # Used for type hinting
 from typing import Any, Callable
@@ -85,12 +86,30 @@ with warnings.catch_warnings():
 
 # Assorted String Constants
 EMPTY_STRING = ""
+BACK_SLASH = "\\"
+SLASH = "/"
 EEPROM = "EEPROM"
 RAM = "RAM"
 
 # Media Directories
 ASSETS_DIR = "assets"
 DEFAULT_SAVE_DIR = "generated"
+
+# Determine Users Download directory, and set save directory
+# for generated files
+downloads_path = str(Path.home() / "Downloads")
+fixed_download_dir = list(downloads_path)
+
+for i, char in enumerate(fixed_download_dir):
+    if (char == BACK_SLASH):
+        fixed_download_dir[i] = SLASH
+
+USER_DOWNLOADS_DIR = f"{''.join(fixed_download_dir)}/{DEFAULT_SAVE_DIR}"
+print(f"USER_DOWNLOADS_DIR: {USER_DOWNLOADS_DIR}")
+
+# Create the directory if it doesn't exist
+directory = Path(f"{USER_DOWNLOADS_DIR}")
+directory.mkdir(parents=True, exist_ok=True)
 
 # Essential Media Paths
 WINDOW_ICON_PATH = f"{ASSETS_DIR}/setup.ico"
@@ -106,7 +125,9 @@ MYSTERY_PATH = f"{ASSETS_DIR}/eye.bmp"
 # User generated file paths
 AUDIO_TYPE = ".wav"
 SEQUENCE_TYPE = ".tsq"
-SYNCHRONISED_USER_AUDIO_PATH = f"{DEFAULT_SAVE_DIR}/delayed{AUDIO_TYPE}"
+SYNCHRONISED_USER_AUDIO_PATH = f"{USER_DOWNLOADS_DIR}/delayed{AUDIO_TYPE}"
+
+print(f" Synchronised user audio path: {SYNCHRONISED_USER_AUDIO_PATH}")
 
 # Sequence file constants
 BUFFER = "---"
