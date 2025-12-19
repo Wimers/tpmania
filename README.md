@@ -1,10 +1,19 @@
-# tpmania - Build Instructions & User Manual
+# TPMANIA
 
-**ENGG2800 | Team 7**
+tpmania is the PC companion software for my ENGG2800 Team Project (Semester 2, 2025). Designed to interface with a miniaturized arcade rhythm game (similar to **Dance Dance Revolution**) which my team designed. This software manages game data and device configuration.
 
-This document provides the installation steps, and user manual for the **tpmania** PC software.
+The software communicates with the hardware via USB to perform the following core functions:
+- Sequence Management: Parses and uploads game sequence files (`.tsq`) to the device's volatile (RAM) or non-volatile (EEPROM) memory.
+- Game Configuration: Allows users to customize gameplay difficulty by adjusting the duration of scoring timing windows (Perfect, Good, OK, Poor).
+
+- Audio Processing: Processes input `.wav` audio files to insert synchronization signals (beeps) required for the hardware to detect the start of a song.
+- Metadata Visualization: Displays track information including Artist, Name, BPM, length, and difficulty levels.
+- Audio Playback: Features an inbuilt audio player.
 
 ---
+
+# Build Instructions & User Manual
+
 
 ## 1. Software Installation (GUI)
 
@@ -28,7 +37,7 @@ The Main Menu appears upon opening the application.
 
 This page allows you to select audio and sequence files to save to the device.
 1.  **Select Files:** Click the folder icons next to **Audio** (`.wav`) and **Sequence** (`.tsq`) to select files.
-    * *Note:* The selected files must have matching names preceding the file extension.
+   * *Note:* The selected files must have matching names preceding the file extension.
 2.  **Save Selection:** Click **Save** to confirm (or **Reset** to clear).
 3.  **Upload to Device:**
     * Select the **Save Location** (RAM or EEPROM).
