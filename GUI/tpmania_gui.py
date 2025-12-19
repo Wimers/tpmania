@@ -390,6 +390,10 @@ class Ui_MainWindow(object):
 "        border: none;\n"
 "        color: transparent;\n"
 "    }")
+        self.AudioSynchronisation = QCheckBox(self.PropertiesFrame)
+        self.AudioSynchronisation.setObjectName(u"AudioSynchronisation")
+        self.AudioSynchronisation.setGeometry(QRect(150, 170, 91, 20))
+        self.AudioSynchronisation.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.homeFromInfo = QPushButton(self.MainPage)
         self.homeFromInfo.setObjectName(u"homeFromInfo")
         self.homeFromInfo.setGeometry(QRect(112, 355, 76, 24))
@@ -562,10 +566,6 @@ class Ui_MainWindow(object):
         self.endCredits.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.endCredits.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.endCredits.setReadOnly(True)
-        self.AudioSynchronisation = QCheckBox(self.mysteryWidget)
-        self.AudioSynchronisation.setObjectName(u"AudioSynchronisation")
-        self.AudioSynchronisation.setGeometry(QRect(90, 180, 91, 20))
-        self.AudioSynchronisation.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.homeFromMystery = QPushButton(self.mysteryPage)
         self.homeFromMystery.setObjectName(u"homeFromMystery")
         self.homeFromMystery.setGeometry(QRect(112, 355, 76, 24))
@@ -714,6 +714,10 @@ class Ui_MainWindow(object):
         self.volumeIcon.setText("")
         self.secretButton.setText("")
 #if QT_CONFIG(tooltip)
+        self.AudioSynchronisation.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.AudioSynchronisation.setText(QCoreApplication.translate("MainWindow", u"Audio Sync", None))
+#if QT_CONFIG(tooltip)
         self.homeFromInfo.setToolTip("")
 #endif // QT_CONFIG(tooltip)
         self.homeFromInfo.setText(QCoreApplication.translate("MainWindow", u"Home", None))
@@ -751,10 +755,6 @@ class Ui_MainWindow(object):
 "Mohamed Zoheiry:     Firmware / Comms\n"
 "Bryan Jun Qian Lau:    Firmware / Game Logic\n"
 "Yi He:                          Hardware / PCB", None))
-#if QT_CONFIG(tooltip)
-        self.AudioSynchronisation.setToolTip("")
-#endif // QT_CONFIG(tooltip)
-        self.AudioSynchronisation.setText(QCoreApplication.translate("MainWindow", u"Audio Sync", None))
 #if QT_CONFIG(tooltip)
         self.homeFromMystery.setToolTip("")
 #endif // QT_CONFIG(tooltip)

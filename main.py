@@ -355,11 +355,6 @@ class MyWindow(QMainWindow):
         # Configures timers, and starts global check timer
         self.configure_timers()
 
-        # Disable additional features
-        self.ui.volumeSlider.hide()
-        self.ui.volumeIcon.hide()
-        self.ui.AudioSynchronisation.setChecked(True)
-
     def configure_timers(self) -> None:
         ''' Configures the GUI's various timers '''
         # Timer for updating audio progress bar

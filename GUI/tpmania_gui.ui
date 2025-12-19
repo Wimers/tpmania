@@ -1282,6 +1282,25 @@
         <string/>
        </property>
       </widget>
+      <widget class="QCheckBox" name="AudioSynchronisation">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>170</y>
+         <width>91</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>Audio Sync</string>
+       </property>
+      </widget>
      </widget>
      <widget class="QPushButton" name="homeFromInfo">
       <property name="geometry">
@@ -1799,25 +1818,6 @@ Jack Scotton:               PC Software
 Mohamed Zoheiry:     Firmware / Comms
 Bryan Jun Qian Lau:    Firmware / Game Logic
 Yi He:                          Hardware / PCB</string>
-       </property>
-      </widget>
-      <widget class="QCheckBox" name="AudioSynchronisation">
-       <property name="geometry">
-        <rect>
-         <x>90</x>
-         <y>180</y>
-         <width>91</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="cursor">
-        <cursorShape>PointingHandCursor</cursorShape>
-       </property>
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="text">
-        <string>Audio Sync</string>
        </property>
       </widget>
      </widget>
