@@ -1,6 +1,10 @@
 # TPMANIA
 
-tpmania is the PC companion software for my ENGG2800 Team Project (Semester 2, 2025). Designed to interface with a miniaturized arcade rhythm game (similar to **Dance Dance Revolution**) which my team designed. This software manages game data and device configuration.
+tpmania is the PC companion software for my ENGG2800 Team Project. Designed to interface with a miniaturized arcade rhythm game which my team designed. This software manages game data, device configuration, and audio playback. 
+
+![Preview](assets/additional/tpmaniaPreview.png)
+
+# Overview
 
 The software communicates with the hardware via USB to perform the following core functions:
 - Sequence Management: Parses and uploads game sequence files (`.tsq`) to the device's volatile (RAM) or non-volatile (EEPROM) memory.
