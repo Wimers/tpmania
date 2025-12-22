@@ -1,16 +1,19 @@
 <div align="center">
 
 [![OS](https://custom-icon-badges.demolab.com/badge/Windows-0078D6?logo=windows11&logoColor=white)](https://www.microsoft.com/windows/)
+[![Release](https://img.shields.io/badge/Release-v1.6.2-007EC6?logo=github&logoColor=white)](https://github.com/Wimers/tpmania/releases/tag/v1.6.2)
 [![Python](https://img.shields.io/badge/Python-v3.13-3776AB?logo=python&logoColor=white)](https://www.python.org/downloads/release/python-3130/)
 [![PySide6](https://img.shields.io/badge/GUI-PySide6-41CD52?logo=qt&logoColor=41CD52)](https://doc.qt.io/qtforpython-6/gettingstarted.html)
 [![FFmpeg](https://img.shields.io/badge/FFmpeg-v8.0.1-007807?logo=ffmpeg&logoColor=399540)](https://ffmpeg.org/about.html)
 [![NSIS](https://img.shields.io/badge/NSIS-v3.11-02589F?logo=nsis)](https://nsis.sourceforge.io/Download)
 
-# **TPMANIA**
+<br>
 
 </div>
 
-TPMANIA is a specialized desktop companion application designed to interface with a custom-built miniaturized arcade rhythm game. It serves as the primary tool for managing device configuration and game data.
+#
+
+**TPMANIA** is a specialized desktop companion application designed to interface with a custom-built miniaturized arcade rhythm game. It serves as the primary tool for managing device configuration and game data.
 
 The software implements a custom serial communication protocol to facilitate bi-directional file transfer between the desktop and the embedded device, and utilises asynchronous multi-threading to ensure GUI responsiveness, and an enjoyable user experience.
 
