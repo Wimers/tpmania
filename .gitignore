@@ -1,5 +1,6 @@
 /python/
 /generated/
-/GUI/__pycache__/
 /GUI/gui_block_checker.py
 /gui_block_checker.py
+__pycache__/
+*:Zone.Identifier
