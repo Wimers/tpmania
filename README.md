@@ -1,6 +1,6 @@
 <div align="center">
   
-<img width="410" height="52" alt="tpmaniaLogoWhite" src="https://github.com/Wimers/tpmania/raw/master/assets/additional/tpmaniaLogoWhite.png" />
+<img width="410" height="52" alt="tpmaniaLogoWhite" src="assets/additional/tpmaniaLogoWhite.png" />
 
 <br>
 <br>
