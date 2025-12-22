@@ -1,6 +1,8 @@
 # TPMANIA
 
-tpmania is the PC companion software for my ENGG2800 Team Project. Designed to interface with a miniaturized arcade rhythm game which my team designed. This software manages game data, device configuration, and audio playback. All work is my own.
+TPMANIA is a specialized desktop companion application designed to interface with a custom-built miniaturized arcade rhythm game. It serves as the primary tool for managing device configuration and game data.
+
+The software implements a custom serial communication protocol to facilitate bi-directional file transfer between the desktop and the embedded device, and utilises asynchronous multi-threading to ensure GUI responsiveness, and an enjoyable user experience.
 
 ![Preview](assets/additional/tpmaniaPreview.png)
 
