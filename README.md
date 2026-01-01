@@ -98,12 +98,12 @@ Configure the difficulty timing settings.
 1.  Ensure the `PySide6` python module is installed.
 2.  Open a command prompt in the `/GUI` directory and run:
     ```bash
-    pyside6-designer
+    $ pyside6-designer
     ```
 3.  Open `tpmania_gui.ui` within PySide6 Designer to make edits and save.
 4.  Compile the Python file by running the following command in the `/GUI` directory:
     ```bash
-    pyside6-uic tpmania_gui.ui -o tpmania_gui.py
+    $ pyside6-uic tpmania_gui.ui -o tpmania_gui.py
     ```
 
 ### Compiling Portable Installer
